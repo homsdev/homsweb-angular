@@ -1,0 +1,34 @@
+@import "main";
+
+.bg-main {
+  background-color: $light;
+}
+
+.hero-section {
+  background-color: $light;
+  background-image: url("../assets/svg/Rain.svg");
+  background-repeat: no-repeat;
+  background-position: top 60px left 0px;
+  background-size: cover;
+}
+
+.portfolio-container {
+  background-color: $dark;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+#About {
+  box-sizing: border-box;
+  padding: 15px;
+}

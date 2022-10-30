@@ -1,0 +1,10 @@
+<div class="job-card" [class.fade]="isActive">
+  <div class="job-card-header">
+    <h1 class="job-title">{{ jobTitle }}</h1>
+    <span class="job-date">{{ getJobPeriod() }}</span>
+  </div>
+  <app-job-task
+    *ngFor="let task of taskList"
+    [taskDescription]="task"
+  ></app-job-task>
+</div>

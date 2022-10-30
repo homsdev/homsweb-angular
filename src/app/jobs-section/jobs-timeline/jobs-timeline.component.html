@@ -1,0 +1,20 @@
+<div class="job-timeline">
+  <div class="timeline-pagination">
+    <ul [ngClass]="getProgress()">
+      <li [ngClass]="isActive(20)" (click)="setProgress(20, 0)">2021-2022</li>
+      <li [ngClass]="isActive(40)" (click)="setProgress(40, 1)">2021-2023</li>
+      <li [ngClass]="isActive(60)" (click)="setProgress(60, 2)">2023-2XXX</li>
+      <li [ngClass]="isActive(100)" (click)="setProgress(100, 3)">2XXX-2XXX</li>
+    </ul>
+  </div>
+</div>
+<div class="jobs-container">
+  <app-job-card
+    [jobTitle]="actualJob.title"
+    [jobStartDate]="actualJob.startDate"
+    [jobEndDate]="actualJob.endDate"
+    [taskList]="actualJob.tasks"
+    [isActive]="animate"
+  >
+  </app-job-card>
+</div>

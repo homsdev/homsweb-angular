@@ -1,0 +1,153 @@
+@import "_normalize";
+@import "_variables";
+@import "_colors";
+@import "abstracts/_mixins";
+
+.card {
+  position: relative;
+  width: 550px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 3px rgba($dark, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 125px;
+  grid-template-rows: auto;
+  overflow: hidden;
+}
+
+.card-icons {
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-30%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 3000;
+}
+
+.card-img-container {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  img {
+    @include transition-default;
+    width: 425px;
+    height: 250px;
+    object-fit: fill;
+    filter: grayscale(100%) blur(2px);
+  }
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: $light;
+  z-index: 1000;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  i {
+    @include transition-default;
+    display: inline-block;
+    width: 0;
+    transform: scale(0);
+  }
+}
+
+.card-info-container {
+  position: relative;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  background-color: #FFFFFF;
+}
+
+.card-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: green;
+
+  span {
+    font-family: $pixelFont;
+    font-size: 12px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+.circle {
+  @include transition-default;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 25px;
+  right: 25px;
+}
+
+.line {
+  width: 3px;
+  height: 250px;
+  position: absolute;
+  left: 30px;
+  border-left: 2px dotted #f2f2f2;
+  z-index: 2000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: $light;
+    bottom: 0;
+    transform: translateX(-52%) translateY(50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: $light;
+    top: 0;
+    transform: translateX(-52%) translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+.card:hover {
+  .circle {
+    transform: scale(10);
+    mix-blend-mode: hard-light;
+  }
+
+  .card-img-container {
+    img {
+      filter: grayscale(0%) blur(0);
+    }
+  }
+
+  .card-title {
+    i {
+      width: 50px;
+      text-decoration: none;
+      transform: scale(1);
+      cursor: pointer;
+    }
+  }
+
+  .card-icons {
+    app-card-icon {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '_normalize';
+@import '_colors';
+
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid $dark;
+  padding-bottom: 5px;
+  position: fixed;
+  top: 0;
+  background-color: $light;
+  z-index: 1000000;
+}
+
+.navbar-brand {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 5px 15px;
+  background-color: $dark;
+  border-radius: 4px;
+  color: $primary;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav-link {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: #f3ec78;
+  background-image: linear-gradient(0deg, $primary, $dark);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all ease-in 300ms;
+
+  &:hover {
+    background-image: $primary;
+    -webkit-text-fill-color: $primary;
+    -moz-text-fill-color: $primary;
+  }
+}

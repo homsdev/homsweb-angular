@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-icons">
+    <app-card-icon
+      *ngFor="let tech of techArray"
+      [techName]="tech"
+    ></app-card-icon>
+  </div>
+  <div class="card-img-container">
+    <span class="card-title">
+      {{ projectName }}
+      <i>
+        <fa-icon class="" [icon]="faArrowRight"></fa-icon>
+      </i>
+    </span>
+    <img [src]="getImage()" alt="card-image" srcset="" />
+  </div>
+  <div class="card-info-container">
+    <div class="card-info">
+      <span>{{ projectDescription }}</span>
+    </div>
+    <div class="circle" [style.background-color]="getProjectColor()"></div>
+  </div>
+  <div class="line"></div>
+</div>

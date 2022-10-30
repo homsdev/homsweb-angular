@@ -1,0 +1,29 @@
+@import "_normalize";
+@import "_colors";
+@import "_variables.scss";
+
+.hero-badge {
+  height: 40px;
+  padding: 1px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 9px -4px $dark;
+  background-color: rgba($color: $primary, $alpha: 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.badge-icon {
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.badge-text {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: $pixelFont;
+  letter-spacing: 1px;
+  margin-left: 15px;
+}

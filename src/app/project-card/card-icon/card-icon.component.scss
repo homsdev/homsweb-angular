@@ -1,0 +1,27 @@
+@import "_normalize";
+@import "_variables";
+@import "_colors";
+@import "abstracts/_mixins";
+
+:host {
+  transition: all 800ms ease;
+  transform: scale(0);
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgba($color: $light, $alpha: 1);
+  padding: 2px;
+  img {
+    @include transition-default;
+    width: 35px;
+    height: 35px;
+    object-fit: fill;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

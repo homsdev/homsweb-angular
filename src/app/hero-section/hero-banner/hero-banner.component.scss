@@ -1,0 +1,54 @@
+@import '_normalize';
+@import '_colors';
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-img {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 80px;
+  background-color: rgba($color: $light, $alpha: .1);
+  backdrop-filter: blur(10px);
+  img {
+    width: 100%;
+    transform: translateY(-10%);
+  }
+}
+
+.hero-text {
+  text-align: center;
+  h1 {
+    font-family: 'VT323';
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 20px auto;
+  }
+}
+
+.hero-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2;
+  grid-template-areas:
+    "One Two"
+    "three three";
+  column-gap: 15px;
+  row-gap: 10px;
+}
+
+app-hero-badge{
+  justify-self: center;
+  align-self: center;
+}
+
+

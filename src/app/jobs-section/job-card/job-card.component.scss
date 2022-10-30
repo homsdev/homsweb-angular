@@ -1,0 +1,44 @@
+@import "_normalize";
+@import "_colors";
+@import "base/_typography";
+
+.job-card {
+  box-sizing: border-box;
+  width: 720px;
+  height: 520px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  filter: drop-shadow(10px 10px 5px rgba($dark, 0.25));
+  padding: 10px 25px;
+}
+
+.job-title {
+  font-family: "Poppins EB";
+  font-size: 48px;
+  color: $primary;
+  margin: 0;
+}
+
+.job-date {
+  width: 100%;
+  display: inline-block;
+  font-family: "VT323";
+  text-align: right;
+  color: lighten($color: $dark, $amount: 30%);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 1300ms ease-out;
+}

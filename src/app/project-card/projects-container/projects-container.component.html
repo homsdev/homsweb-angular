@@ -1,0 +1,11 @@
+<div class="container-fluid vh-100">
+  <app-card
+    *ngFor="let projectItem of projectList"
+    class="item"
+    [projectName]="projectItem.projectTitle"
+    [projectColor]="projectItem.projectHexColor"
+    [projectDescription]="projectItem.projectDescription"
+    [techArray]="projectItem.projectTechs"
+  >
+  </app-card>
+</div>
